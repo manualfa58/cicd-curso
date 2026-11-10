@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
 permissions:
-  contests: read
+  contents: read
   packages: write
 jobs:
   test:
