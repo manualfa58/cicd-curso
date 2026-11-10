@@ -1,5 +1,5 @@
 name: CI Python
-0
+
 on:
   push:
     branches: [main]
