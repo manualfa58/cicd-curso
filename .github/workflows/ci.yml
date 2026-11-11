@@ -35,3 +35,10 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Publicar imagen Docker
         run: docker push ghcr.io/${{ github.repository }}:latest
+  deploy:
+    needs: tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Simular despliegue
+        run: echo "Desplegando aplicacion..."
