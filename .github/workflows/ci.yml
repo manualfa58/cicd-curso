@@ -36,7 +36,7 @@ jobs:
       - name: Publicar imagen Docker
         run: docker push ghcr.io/${{ github.repository }}:latest
   deploy:
-    needs: tests
+    needs: test
     runs-on: ubuntu-latest
 
     steps:
