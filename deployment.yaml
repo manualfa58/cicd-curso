@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: cicd-app
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: cicd-app
+
+  template:
+    metadata:
+      labels:
+        app: cicd-app
+
+    spec:
+      containers:
+        - name: cicd-app
+          image: ghcr.io/manualfa58/cicd-curso:latest
+          ports:
+            - containerPort: 5000
